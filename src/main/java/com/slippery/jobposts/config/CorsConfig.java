@@ -11,7 +11,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://book-store-ui-ten.vercel.app")
+                        .allowedOrigins("*")
                         .allowedMethods("GET","DELETE","POST","PUT");
             }
         };

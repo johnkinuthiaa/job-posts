@@ -1,5 +1,7 @@
 package com.slippery.jobposts.config;
 
+import com.slippery.jobposts.service.impl.JwtService;
+import com.slippery.jobposts.service.impl.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,7 +21,7 @@ public class JwtFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
     ApplicationContext context;
 
-    public JwtFilter(JwtService jwtService,ApplicationContext context) {
+    public JwtFilter(JwtService jwtService, ApplicationContext context) {
         this.jwtService = jwtService;
         this.context=context;
     }

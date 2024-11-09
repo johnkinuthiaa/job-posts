@@ -30,12 +30,12 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/employer/**").hasAnyRole("EMPLOYER")
-                        .requestMatchers("/api/user/**").hasAnyRole("USER")
+                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/api/v1/employer/**").hasAnyRole("EMPLOYER")
+                        .requestMatchers("/api/v1/user/**").hasAnyRole("USER")
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
-                .oauth2Login(Customizer.withDefaults())
+//                .oauth2Login(Customizer.withDefaults())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
 
