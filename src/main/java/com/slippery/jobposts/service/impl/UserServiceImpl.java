@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
         if(repository.findByUsername(user.getUsername()) ==null){
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             repository.save(user);
-            response.setMessage("user registered ");
+            response.setMessage(user.getUsername()+" successfully registered ");
             response.setStatusCode(200);
         }else{
             response.setStatusCode(500);
@@ -50,10 +50,10 @@ public class UserServiceImpl implements UserService {
         if(authentication.isAuthenticated()){
             var token =jwtService.generateJwtToken(user.getUsername());
             response.setJwtToken(token.getJwtToken());
-            response.setMessage("successfully logged in");
+            response.setMessage(user.getUsername()+" successfully logged in");
             response.setStatusCode(200);
         }else{
-            response.setMessage(" not logged in successfully");
+            response.setMessage(user.getUsername()+" not logged in successfully");
             response.setStatusCode(500);
         }
         return response;
