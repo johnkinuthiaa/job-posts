@@ -30,7 +30,7 @@ Maven
 ### Installation
 1. Clone the Repository
 
-```bash
+```sh
 git clone https://github.com/yourusername/job-posting-app.git
 cd job-posting-app
 ```
@@ -40,7 +40,7 @@ Create a new MySQL database for the application.
 Update the application.properties file with your database credentials.
 properties
 
-```bash
+```sh
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
@@ -48,14 +48,14 @@ spring.datasource.password=your_password
 
 3. Build the Project
 
-```bash
+```sh
 mvn clean install
 ```
 
 
 You can run the application using the following command:
 
-```bash 
+```sh 
 mvn spring-boot:run
 Access the Application
 ```
@@ -78,7 +78,7 @@ Open your web browser and navigate to http://localhost:8080.
 Testing
 To run the tests, use the following command:
 
-```bash
+```sh
 mvn test
 ```
 ### Contributing
