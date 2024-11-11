@@ -48,5 +48,4 @@ public class JobPostingController {
         service.deleteAllPostings();
     }
 
-//
 }
