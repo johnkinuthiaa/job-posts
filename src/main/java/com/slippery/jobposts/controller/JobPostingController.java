@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/job-postings")
 public class JobPostingController {
+
     private final JobsService service;
     public  JobPostingController(JobsService service){
         this.service=service;
