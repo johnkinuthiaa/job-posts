@@ -86,4 +86,9 @@ public class JobServiceImpl implements JobsService {
                 .filter(jobPosting -> jobPosting.getLocation().toLowerCase().contains(location.toLowerCase()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<JobPosting> getAllJobs() {
+        return repository.findAll();
+    }
 }

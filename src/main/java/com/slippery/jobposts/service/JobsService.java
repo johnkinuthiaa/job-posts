@@ -12,4 +12,5 @@ public interface JobsService {
     List<JobPosting> getJobByKeyWords(List<String> keywords);
     List<JobPosting> getJobByName(String name);
     List<JobPosting> getJobByLocation(String location);
+    List<JobPosting> getAllJobs();
 }
